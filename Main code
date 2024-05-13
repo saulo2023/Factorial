@@ -1,0 +1,22 @@
+
+
+def factorial(n):
+    """Calculate the factorial of a number."""
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+def main():
+    """Main function to get user input and display the factorial."""
+    try:
+        num = int(input("Enter a non-negative integer: "))
+        if num < 0:
+            print("Please enter a non-negative integer.")
+        else:
+            print(f"The factorial of {num} is {factorial(num)}")
+    except ValueError:
+        print("Invalid input. Please enter a non-negative integer.")
+
+if __name__ == "__main__":
+    main()
